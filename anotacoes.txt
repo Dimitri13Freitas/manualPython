@@ -1,0 +1,11 @@
+introdução
+	
+
+Strings
+	Formatação de String
+	Operações, Funções e Métodos
+	Exemplos com exercicios que eu fiz
+
+
+Dicionarios
+	Manipulando um Dicionarios

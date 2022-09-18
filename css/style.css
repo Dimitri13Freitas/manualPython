@@ -1,0 +1,166 @@
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+}
+
+/* Cores */
+:root {
+  --p1: #ebff00;
+  --p2: #141414;
+  --bg: #2c2c2c;
+  --font1: #f1f1f1;
+  --bgContent: rgb(255, 255, 255, 0.1);
+}
+
+/* Utilitário */
+.titulo {
+  color: var(--font1);
+  font-size: 3.5rem;
+  margin: 65px 0 15px 45px;
+}
+.titulo span {
+  color: var(--p1);
+}
+.subtitulo {
+  color: var(--font1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.subtitulo::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 20px;
+  background: #ebff00;
+  position: absolute;
+  left: -30px;
+}
+
+/* Header */
+.header {
+  padding: 22px 0 20px 0;
+  background-color: var(--p2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(30deg, var(--p2) 45%, var(--p1)) 1;
+}
+
+/* Navegacão */
+.navegacao {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: var(--font1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  font-size: 1.1rem;
+}
+.navegacao li {
+  display: block;
+  gap: 3px;
+  cursor: pointer;
+  padding: 20px 0;
+  position: relative;
+}
+.navegacao li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--p1);
+  transition: 0.3s;
+  margin-top: 2px;
+}
+.navegacao li:hover::after {
+  width: 100%;
+}
+
+/* DropDown */
+.navegacao li:hover ul {
+  display: block;
+  position: absolute;
+  animation: show-up 0.3s forwards;
+}
+.navegacao ul {
+  display: none;
+}
+.dropDown {
+  margin-top: 15px;
+  background-color: var(--bgContent);
+  border-radius: 4px;
+  padding: 10px 0 0 0;
+  border: var(--font1) solid 1px;
+}
+.dropDown li {
+  font-size: 0.9rem;
+  padding: 10px 40px 10px 8px;
+}
+.dropDown li a {
+  color: var(--font1);
+}
+.dropDown:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-bottom: 15px solid var(--bg);
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  left: 8px;
+}
+.dropDown li:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+/* Conteúdo */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: var(--bgContent);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--p2);
+  border-top: 2px solid;
+  border-image: linear-gradient(30deg, var(--p1), var(--p2) 45%) 1;
+}
+.footer p {
+  color: var(--font1);
+}
+.footer p span {
+  color: var(--p1);
+}
+.footer p a {
+  color: var(--font1);
+}
+
+/* Animações */
+@keyframes show-up {
+  from {
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
