@@ -18,94 +18,56 @@
 <body>
 
   <header class="header">
-    <h1>Estrutura de dados</h1>
-    <nav>
-      <ul class="navegacao">
-        <li>Introdução
-          <ul class="dropDown">
-            <li> <a href="controle.html">Controle de Fluxo</a> </li>
-            <li>Listas</li>
-          </ul>
-        </li>
-        <li>
-          Strings
-          <ul class="dropDown">
-            <li>Formatação de String</li>
-            <li>Operações, Funções e Métodos</li>
-            <li>Na Prática</li>
-          </ul>
-        </li>
-        <li>Dicionarios</li>
-        <button data-btn="theme" class="btnTheme"></button>
-      </ul>
-    </nav>
+    <div>
+      <h1>Estrutura de dados</h1>
+      <button data-btn="mobile">Menu</button>
+    </div>
+    <ul class="navegacao" data-menu="lista">
+      <li>Introdução
+        <ul class="dropDown">
+          <li> <a href="controle.html">Controle de Fluxo</a> </li>
+          <li>Listas</li>
+        </ul>
+      </li>
+      <li>
+        Strings
+        <ul class="dropDown">
+          <li>Formatação de String</li>
+          <li>Operações, Funções e Métodos</li>
+          <li>Na Prática</li>
+        </ul>
+      </li>
+      <li>Dicionarios</li>
+    </ul>
+    <button data-btn="theme" class="btnTheme" name="changeTheme" value="disable"></button>
   </header>
 
   <h1 class="titulo">Introdução ao Python<span>.</span></h1>
-  <main class="gridContainer">
-    <section class="container">
-      <h2 class="subtitulo">Conceito de Variáveis</h2>
-      <div>
-        <ul class="lista">
-          <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
-          <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
-          <div class="exemplos">
-            <div>
-              <p>Exemplo:</p>
-              <img src="img/codes/code.png" alt="">
+  <main class="mainContainer">
+
+    <div class="column">
+      <section class="content">
+        <h2 class="subtitulo">Conceito de Variáveis</h2>
+        <div>
+          <ul class="lista">
+            <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
+            <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
+            <div class="exemplos">
+              <div>
+                <p>Exemplo:</p>
+                <img src="img/codes/code.png" alt="">
+              </div>
+              <div>
+                <p>Retorna:</p>
+                <img src="img/codes/code2.png" alt="">
+              </div>
             </div>
-            <div>
-              <p>Retorna:</p>
-              <img src="img/codes/code2.png" alt="">
-            </div>
-          </div>
-        </ul>
-      </div>
-    </section>
+          </ul>
+        </div>
+      </section>
 
-
-    <section class="container">
-      <h2 class="subtitulo">Nomes Reservados</h2>
-      <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
-      <div>
-        <ul class="lista listaPalavras">
-          <li>and</li>
-          <li>as</li>
-          <li>assert</li>
-          <li>break</li>
-          <li>class</li>
-          <li>continue</li>
-          <li>def</li>
-          <li>del</li>
-          <li>elif</li>
-          <li>else</li>
-          <li>except</li>
-          <li>exec</li>
-          <li>finally</li>
-          <li>for</li>
-          <li>from</li>
-          <li>global</li>
-          <li>if</li>
-          <li>import</li>
-          <li>in</li>
-          <li>lambda</li>
-          <li>not</li>
-          <li>or</li>
-          <li>pass</li>
-          <li>print</li>
-          <li>raise</li>
-          <li>return</li>
-          <li>try</li>
-          <li>while</li>
-          <li>with</li>
-          <li>yield</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="container">
-      <h2 class="subtitulo">Tipos de Variáveis</h2>
-      <div>
+      <section class="content ">
+        <h2 class="subtitulo">Tabelas de Operadores</h2>
         <table>
           <thead>
             <tr>
@@ -122,41 +84,137 @@
             </tr>
             <tr>
               <td>-</td>
-              <td>seila</td>
-              <td>seila</td>
+              <td>Subtrai dois Valores</td>
+              <td>3 - 2 = 1</td>
             </tr>
             <tr>
-              <td>seila</td>
-              <td>seila</td>
-              <td>seila</td>
+              <td>*</td>
+              <td>Multiplica dois Valores</td>
+              <td>3 * 2 = 6</td>
             </tr>
             <tr>
-              <td>seila</td>
-              <td>seila</td>
-              <td>seila</td>
+              <td>/</td>
+              <td>Divide dois valores</td>
+              <td>3 / 2 = 1.5</td>
             </tr>
             <tr>
-              <td>seila</td>
-              <td>seila</td>
-              <td>seila</td>
+              <td>//</td>
+              <td>Divide dois valores, porém arrendonda para baixo</td>
+              <td>3 / 2 = 1</td>
             </tr>
             <tr>
-              <td>seila</td>
-              <td>seila</td>
-              <td>seila</td>
+              <td>%</td>
+              <td>Resto da Divisão</td>
+              <td>3 % 2 = 1</td>
             </tr>
             <tr>
-              <td>seila</td>
-              <td>seila</td>
-              <td>seila</td>
+              <td>**</td>
+              <td>Exponenciação</td>
+              <td>3 ** 2 = 9</td>
             </tr>
           </tbody>
         </table>
+      </section>
+    </div>
+
+    <div class="column">
+      <section class="content">
+        <h2 class="subtitulo">Nomes Reservados</h2>
+        <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
+        <div>
+          <ul class="lista listaPalavras">
+            <li>and</li>
+            <li>as</li>
+            <li>assert</li>
+            <li>break</li>
+            <li>class</li>
+            <li>continue</li>
+            <li>def</li>
+            <li>del</li>
+            <li>elif</li>
+            <li>else</li>
+            <li>except</li>
+            <li>exec</li>
+            <li>finally</li>
+            <li>for</li>
+            <li>from</li>
+            <li>global</li>
+            <li>if</li>
+            <li>import</li>
+            <li>in</li>
+            <li>lambda</li>
+            <li>not</li>
+            <li>or</li>
+            <li>pass</li>
+            <li>print</li>
+            <li>raise</li>
+            <li>return</li>
+            <li>try</li>
+            <li>while</li>
+            <li>with</li>
+            <li>yield</li>
+          </ul>
+        </div>
+      </section>
 
 
-        </ul>
-      </div>
-    </section>
+      <section class="content ">
+        <h2 class="subtitulo">Tabelas de Operadores</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>+</td>
+              <td>Soma de dois Valores</td>
+              <td>3 + 2 = 5</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Subtrai dois Valores</td>
+              <td>3 - 2 = 1</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>Multiplica dois Valores</td>
+              <td>3 * 2 = 6</td>
+            </tr>
+            <tr>
+              <td>/</td>
+              <td>Divide dois valores</td>
+              <td>3 / 2 = 1.5</td>
+            </tr>
+            <tr>
+              <td>//</td>
+              <td>Divide dois valores, porém arrendonda para baixo</td>
+              <td>3 / 2 = 1</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Resto da Divisão</td>
+              <td>3 % 2 = 1</td>
+            </tr>
+            <tr>
+              <td>**</td>
+              <td>Exponenciação</td>
+              <td>3 ** 2 = 9</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+
+
+
+
+
+
   </main>
 
 
@@ -176,18 +234,6 @@
 
 
 
-
-
-  <!-- <div class="exemplos">
-    <div>
-      <p>Exemplo:</p>
-      <img src="img/codes/code.png" alt="fOTO COM CADA TIPO DE VARIAVEL">
-    </div>
-    <div>
-      <p>Retorna:</p>
-      <img src="img/codes/code2.png" alt="">
-    </div>
-  </div> -->
 
 
 

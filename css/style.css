@@ -5,7 +5,6 @@
   text-decoration: none;
   list-style: none;
 }
-
 body {
   background: var(--bg);
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
@@ -60,7 +59,7 @@ body {
 
 /* Header */
 .header {
-  padding: 22px 0 20px 0;
+  padding: 20px 0;
   background-color: var(--p2);
   display: flex;
   justify-content: space-around;
@@ -141,18 +140,25 @@ body {
 }
 
 /* Conteúdo */
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding: 50px;
+.mainContainer {
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25px;
 }
-.container {
+.mainContainer .column {
+  display: flex;
+  flex-direction: column;
+  max-width: 585px;
+  gap: 25px;
+}
+.content {
   background-color: var(--bgContent);
   border-radius: 5px;
   padding: 20px;
 }
-.container > div {
+.content > div {
   margin-top: 10px;
 }
 .exemplos {
@@ -210,21 +216,15 @@ body {
 }
 
 /* Especificos */
+.content > p {
+  margin: 20px 0;
+  color: var(--font1);
+}
 .listaPalavras {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-.container > p {
-  margin: 20px 0;
-  color: var(--font1);
-}
-.listaOperadores li {
-  display: flex;
-  justify-content: space-around;
-  gap: 100px;
-  border: none;
 }
 
 /* Chenge Mode */
@@ -258,6 +258,7 @@ table {
   background-color: var(--bgContent);
   box-shadow: 0 0 2px var(--bg);
   color: var(--font1);
+  margin-top: 12px;
 }
 tbody {
   background: var(--bgContent);
@@ -265,6 +266,9 @@ tbody {
 td {
   text-align: center;
   padding: 5px 10px;
+}
+th {
+  padding: 8px 12px;
 }
 
 /* Animações */
@@ -277,9 +281,46 @@ td {
   }
 }
 
+/* Menu Mobile */
+[data-btn="mobile"] {
+  display: none;
+}
+
 /* Responsivo */
 @media (max-width: 800px) {
-  .gridContainer {
-    grid-template-columns: 1fr;
+  .titulo {
+    font-size: 3rem;
+  }
+  .mainContainer {
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  .mainContainer .column {
+    max-width: 610px;
+  }
+  [data-btn="mobile"] {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--bgContent);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: var(--font1);
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    margin: 15px 10px 0 0px;
+  }
+  [data-btn="mobile"]::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    background-color: var(--font1);
+    box-shadow: 0 4px var(--font1), 0 -4px var(--font1);
+  }
+  [data-menu="lista"] {
+    display: none;
   }
 }
