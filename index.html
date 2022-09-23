@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+  <script>document.documentElement.className = ' js'</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;700&display=swap" rel="stylesheet">
@@ -9,15 +10,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seila</title>
+  <title>Estrutura de Dados</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/python.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="img/assets/python.svg" type="image/x-icon">
 </head>
 
 <body>
 
   <header class="header">
-    <a href="index.html"><img src="img/assets/logo.svg" alt="Logo"></a>
+    <h1>Estrutura de dados</h1>
     <nav>
       <ul class="navegacao">
         <li>Introdução
@@ -35,74 +36,158 @@
           </ul>
         </li>
         <li>Dicionarios</li>
+        <button data-btn="theme" class="btnTheme"></button>
       </ul>
     </nav>
   </header>
 
   <h1 class="titulo">Introdução ao Python<span>.</span></h1>
-  <section class="container">
-    <h2 class="subtitulo">Conceito de Variáveis</h2>
+  <main class="gridContainer">
+    <section class="container">
+      <h2 class="subtitulo">Conceito de Variáveis</h2>
+      <div>
+        <ul class="lista">
+          <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
+          <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
+          <div class="exemplos">
+            <div>
+              <p>Exemplo:</p>
+              <img src="img/codes/code.png" alt="">
+            </div>
+            <div>
+              <p>Retorna:</p>
+              <img src="img/codes/code2.png" alt="">
+            </div>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="container">
+      <h2 class="subtitulo">Nomes Reservados</h2>
+      <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
+      <div>
+        <ul class="lista listaPalavras">
+          <li>and</li>
+          <li>as</li>
+          <li>assert</li>
+          <li>break</li>
+          <li>class</li>
+          <li>continue</li>
+          <li>def</li>
+          <li>del</li>
+          <li>elif</li>
+          <li>else</li>
+          <li>except</li>
+          <li>exec</li>
+          <li>finally</li>
+          <li>for</li>
+          <li>from</li>
+          <li>global</li>
+          <li>if</li>
+          <li>import</li>
+          <li>in</li>
+          <li>lambda</li>
+          <li>not</li>
+          <li>or</li>
+          <li>pass</li>
+          <li>print</li>
+          <li>raise</li>
+          <li>return</li>
+          <li>try</li>
+          <li>while</li>
+          <li>with</li>
+          <li>yield</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="subtitulo">Tipos de Variáveis</h2>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>+</td>
+              <td>Soma de dois Valores</td>
+              <td>3 + 2 = 5</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>seila</td>
+              <td>seila</td>
+            </tr>
+            <tr>
+              <td>seila</td>
+              <td>seila</td>
+              <td>seila</td>
+            </tr>
+            <tr>
+              <td>seila</td>
+              <td>seila</td>
+              <td>seila</td>
+            </tr>
+            <tr>
+              <td>seila</td>
+              <td>seila</td>
+              <td>seila</td>
+            </tr>
+            <tr>
+              <td>seila</td>
+              <td>seila</td>
+              <td>seila</td>
+            </tr>
+            <tr>
+              <td>seila</td>
+              <td>seila</td>
+              <td>seila</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="exemplos">
     <div>
-      <ul class="lista">
-        <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
-        <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
-        <div class="exemplos">
-          <div>
-            <p>Exemplo:</p>
-            <img src="img/codes/code.png" alt="">
-          </div>
-          <div>
-            <p>Retorna:</p>
-            <img src="img/codes/code2.png" alt="">
-          </div>
-        </div>
-      </ul>
+      <p>Exemplo:</p>
+      <img src="img/codes/code.png" alt="fOTO COM CADA TIPO DE VARIAVEL">
     </div>
-  </section>
-
-  <section class="container">
-    <h2 class="subtitulo">Tipos de Variáveis</h2>
     <div>
-      <ul class="lista">
-        <li>Inteiro - Números inteiros - (int)</li>
-        <li>Ponto Flutuante - Números decimais - (str)</li>
-        <li>String - Qualquer tipo de caracter entre aspas - (float)</li>
-        <li>Boolean - Pode variar entre True or False - (bool)</li>
-        <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
-        <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
-        <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
-
-        <div class="exemplos">
-          <div>
-            <p>Exemplo:</p>
-            <img src="img/codes/code.png" alt="">
-          </div>
-          <div>
-            <p>Retorna:</p>
-            <img src="img/codes/code2.png" alt="">
-          </div>
-        </div>
-      </ul>
+      <p>Retorna:</p>
+      <img src="img/codes/code2.png" alt="">
     </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div> -->
 
 
 
@@ -115,7 +200,7 @@
     <p>Alguns Direitos reservados <span>&copy;</span><a href="https://github.com/Dimitri13Freitas"> Dimitri Freitas.</a></p>
   </footer> -->
 
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
