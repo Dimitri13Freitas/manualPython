@@ -8,13 +8,17 @@ btnMenu.addEventListener('click', elemento);
 
 const ativa = {
   element:document,
+  classe:'ativo',
   changeTheme() {
-    this.element.documentElement.classList.toggle('theme');
-    btnTheme.classList.toggle('ativo');
+    this.element.documentElement.classList.toggle(this.classe);
+    btnTheme.classList.toggle(this.classe);
   },
   openMenu() {
-    menuMobile.classList.toggle('ativo');
-    btnMenu.classList.toggle('ativo');
+    menuMobile.classList.toggle(this.classe);
+    btnMenu.classList.toggle(this.classe);
+  },
+  fixedDropdown() {
+    
   }
 };
 

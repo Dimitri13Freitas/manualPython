@@ -25,12 +25,11 @@
     <ul class="navegacao" data-menu="lista">
       <li>Introdução
         <ul class="dropDown">
-          <li> <a href="controle.html">Controle de Fluxo</a> </li>
+          <li> <a href="#controle">Controle de Fluxo</a> </li>
           <li>Listas</li>
         </ul>
       </li>
-      <li>
-        Strings
+      <li> <a href="#Strings">Strings</a>
         <ul class="dropDown">
           <li>Formatação de String</li>
           <li>Operações, Funções e Métodos</li>
@@ -42,9 +41,8 @@
     <button data-btn="theme" class="btnTheme" name="changeTheme"></button>
   </header>
 
-  <h1 class="titulo">Introdução ao Python<span>.</span></h1>
-  <main class="mainContainer">
-
+  <h1 class="titulo" id="introducao">Introdução ao Python<span>.</span></h1>
+  <article class="mainContainer">
     <div class="column">
       <section class="content">
         <h2 class="subtitulo">Conceito de Variáveis</h2>
@@ -65,59 +63,6 @@
           </ul>
         </div>
       </section>
-
-      <section class="content ">
-        <h2 class="subtitulo">Tabelas de Operadores</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Operador</th>
-              <th>Descrição</th>
-              <th>Exemplo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>+</td>
-              <td>Soma de dois Valores</td>
-              <td>3 + 2 = 5</td>
-            </tr>
-            <tr>
-              <td>-</td>
-              <td>Subtrai dois Valores</td>
-              <td>3 - 2 = 1</td>
-            </tr>
-            <tr>
-              <td>*</td>
-              <td>Multiplica dois Valores</td>
-              <td>3 * 2 = 6</td>
-            </tr>
-            <tr>
-              <td>/</td>
-              <td>Divide dois valores</td>
-              <td>3 / 2 = 1.5</td>
-            </tr>
-            <tr>
-              <td>//</td>
-              <td>Divide dois valores, porém arrendonda para baixo</td>
-              <td>3 / 2 = 1</td>
-            </tr>
-            <tr>
-              <td>%</td>
-              <td>Resto da Divisão</td>
-              <td>3 % 2 = 1</td>
-            </tr>
-            <tr>
-              <td>**</td>
-              <td>Exponenciação</td>
-              <td>3 ** 2 = 9</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
-
-    <div class="column">
       <section class="content">
         <h2 class="subtitulo">Nomes Reservados</h2>
         <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
@@ -156,10 +101,8 @@
           </ul>
         </div>
       </section>
-
-
       <section class="content ">
-        <h2 class="subtitulo">Tabelas de Operadores</h2>
+        <h2 class="subtitulo">Tabela de Operadores Aritméticos</h2>
         <table>
           <thead>
             <tr>
@@ -207,18 +150,167 @@
           </tbody>
         </table>
       </section>
+    </div>
+    <div class="column">
+      <section class="content">
+        <h2 class="subtitulo">Tipos de Variáveis</h2>
+        <div>
+          <ul class="lista">
+            <li>Inteiro - Números inteiros - (int)</li>
+            <li>Ponto Flutuante - Números decimais - (float)</li>
+            <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
+            <li>Boolean - Pode variar entre True or False - (bool)</li>
+            <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
+            <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
+            <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
+            <div class="exemplos">
+              <div>
+                <p>Exemplo:</p>
+                <img src="img/codes/code.png" alt="">
+              </div>
+              <div>
+                <p>Retorna:</p>
+                <img src="img/codes/code2.png" alt="">
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+      <section class="content ">
+        <h2 class="subtitulo">Tabela de Operadores Lógicos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>and</td>
+              <td>"e" lógico</td>
+              <td>Só se retorna "true" quando todas as condições são verdadeiras</td>
+            </tr>
+            <tr>
+              <td>or</td>
+              <td>"ou" lógico</td>
+              <td>Apenas uma das condições tem que ser verdadeiras</td>
+            </tr>
+            <tr>
+              <td>not</td>
+              <td>"não" lógico</td>
+              <td>Inverte o valor da condição</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="content ">
+        <h2 class="subtitulo">Tabela de Operadores Relacionais</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Operador</th>
+              <th>Descrição</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>==</td>
+              <td>(bollean) Verifica se dois Valores são iguais</td>
+              <td>3 == 2 resulta em "False"</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>(bollean) Verifica se dois valores são diferentes</td>
+              <td>3 != 2 resulta em "True"</td>
+            </tr>
+            <tr>
+              <td><code>></code></td>
+              <td>(bollean) Verifica se x é maior que y</td>
+              <td><code>3 > 2 resulta em "True"</code></td>
+            </tr>
+            <tr>
+              <td><code><</code></td>
+              <td>(bollean) Verifica se x é menor que y</td>
+              <td><code>3 < 2 resulta em "False" </code></td>
+            </tr>
+            <tr>
+              <td><code>>=</code></td>
+              <td>(bollean) Verifica se x é maior ou igual a y</td>
+              <td><code>3 =< 2 resulta em "False" </code></td>
+            </tr>
+            <tr>
+              <td><code><=</code></td>
+              <td>(bollean) Verifica se x é menor ou igual a y</td>
+              <td><code>3 <=  2 resulta em "False" </code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </article>
 
+  <h1 class="titulo" id="controle">Controle de fluxo de execução<span>.</span></h1>
+
+  <article class="mainContainer">
+
+    <div class="column">
+      <section class="content">
+        <h2 class="subtitulo">Tipos de Variáveis</h2>
+        <div>
+          <ul class="lista">
+            <li>Inteiro - Números inteiros - (int)</li>
+            <li>Ponto Flutuante - Números decimais - (float)</li>
+            <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
+            <li>Boolean - Pode variar entre True or False - (bool)</li>
+            <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
+            <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
+            <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
+            <div class="exemplos">
+              <div>
+                <p>Exemplo:</p>
+                <img src="img/codes/code.png" alt="">
+              </div>
+              <div>
+                <p>Retorna:</p>
+                <img src="img/codes/code2.png" alt="">
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
     </div>
 
+    <div class="column">
+      <section class="content">
+        <h2 class="subtitulo">Tipos de Variáveis</h2>
+        <div>
+          <ul class="lista">
+            <li>Inteiro - Números inteiros - (int)</li>
+            <li>Ponto Flutuante - Números decimais - (float)</li>
+            <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
+            <li>Boolean - Pode variar entre True or False - (bool)</li>
+            <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
+            <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
+            <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
+            <div class="exemplos">
+              <div>
+                <p>Exemplo:</p>
+                <img src="img/codes/code.png" alt="">
+              </div>
+              <div>
+                <p>Retorna:</p>
+                <img src="img/codes/code2.png" alt="">
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+    </div>
 
-
-
-
-
-  </main>
-
-
-
+  </article>
 
 
 
