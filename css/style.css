@@ -92,6 +92,7 @@ body {
   display: block;
   padding: 20px 0;
   position: relative;
+  cursor: pointer;
 }
 .navegacao li::after {
   content: "";
