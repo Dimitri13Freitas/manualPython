@@ -22,5 +22,5 @@ const ativa = {
 
 function elemento(event) {
   const nome = event.target.name;
-  ativa[nome]();
+  ativa[nome](nome);
 };

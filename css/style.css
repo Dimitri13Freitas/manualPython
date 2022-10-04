@@ -1,7 +1,4 @@
 /* Geral */
-html {
-  scroll-behavior: smooth;
-}
 * {
   margin: 0;
   padding: 0;
@@ -126,9 +123,6 @@ body {
   font-size: 0.9rem;
   padding: 10px 40px 10px 8px;
 }
-.dropDown li a {
-  color: var(--font1);
-}
 .dropDown:after {
   content: "";
   width: 0;
@@ -165,14 +159,14 @@ body {
   padding: 20px;
 }
 .content > div {
-  margin-top: 10px;
+  margin-top: 12px;
 }
-.exemplos {
+/* .exemplos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 .exemplos img {
   max-width: calc(100% - 150px);
   margin-top: 8px;
@@ -182,9 +176,9 @@ body {
   color: var(--font1);
   font-size: 1.3rem;
 }
-.lista .exemplos {
+/* .lista .exemplos {
   align-self: center;
-}
+} */
 .lista {
   color: var(--font1);
   display: flex;
@@ -196,6 +190,8 @@ body {
   background: var(--bgContent);
   border-radius: 6px;
   padding: 10px 15px;
+}
+.txt {
 }
 
 /* Footer */
@@ -230,7 +226,7 @@ body {
   justify-content: center;
 }
 
-/* Chenge Mode */
+/* Change Mode */
 .btnTheme {
   width: 45px;
   height: 22px;
@@ -296,9 +292,6 @@ th {
   }
   table {
     font-size: 0.875rem;
-  }
-  .content {
-    margin: 0 30px;
   }
   .titulo {
     margin: 30px 0 30px 10px;
@@ -369,6 +362,11 @@ th {
 @media (max-width: 380px) {
   [data-menu="lista"] {
     top: 100px;
+  }
+  .subtitulo::before {
+    width: 4px;
+    height: 100%;
+    left: -10px;
   }
 }
 
