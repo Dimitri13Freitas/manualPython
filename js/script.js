@@ -56,5 +56,6 @@ function pushHtml(html) {
   document.title = novohtml.querySelector('title').innerText
 }
 window.addEventListener('popstate', () => {
-  fetchPage(window.location)
+  fetchPage(window.location);
 })
+

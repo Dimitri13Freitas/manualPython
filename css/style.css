@@ -79,7 +79,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 75px;
+  gap: 80px;
   font-size: 1.1rem;
 }
 .navegacao li a {
@@ -112,16 +112,13 @@ body {
 }
 .navegacao ul {
   display: none;
+  z-index: 20000;
 }
 .dropDown {
   margin-top: 15px;
   background-color: var(--bgContent);
   border-radius: 4px;
   padding: 10px 0 0 0;
-}
-.dropDown li {
-  font-size: 0.9rem;
-  padding: 10px 40px 10px 8px;
 }
 .dropDown:after {
   content: "";
@@ -135,6 +132,22 @@ body {
   top: -10px;
   left: 8px;
 }
+.dropDown li {
+  font-size: 0.9rem;
+  padding: 10px 40px 10px 8px;
+}
+.dropDown li::after {
+  display: none;
+}
+.dropDown li a {
+  transition: 0.3s ease-out;
+}
+.dropDown li:hover a,
+.dropDown li::after {
+  display: block;
+  transform: translateX(10px) !important;
+}
+
 .dropDown li:hover {
   background-color: var(--bgContent);
 }
