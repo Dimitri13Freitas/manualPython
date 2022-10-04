@@ -35,15 +35,14 @@ a.forEach(e => {
 function handleClick(event) {
   event.preventDefault();
   fetchPage(event.target.href);
+  window.history.pushState(null, null, event.target.href)
 }
+
 
 async function fetchPage(link) {
   const response = await fetch(link);
   const pageText = await response.text();
   pushHtml(pageText);
-  // fetch(link)
-  // .then(response => response.text()
-  // .then(obj => pushHtml(obj)))
 }
 
 function pushHtml(html) {
@@ -56,3 +55,6 @@ function pushHtml(html) {
   AntigoConteudo.innerHTML = novoConteudo.innerHTML;
   document.title = novohtml.querySelector('title').innerText
 }
+window.addEventListener('popstate', () => {
+  fetchPage(window.location)
+})
