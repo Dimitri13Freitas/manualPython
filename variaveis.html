@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura de Dados - Variaveis e Operadores</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/assets/python.svg" type="image/x-icon">
+</head>
+
+<body>
+
+  <header class="header">
+    <div>
+      <a href="index.html">
+        <h1>Estrutura de dados</h1>
+      </a>
+      <button data-btn="mobile" name="openMenu">Menu</button>
+    </div>
+    <ul class="navegacao" data-menu="lista">
+      <li>Introdução
+        <ul class="dropDown">
+          <li><a href="variaveis.html">Variaveis e Operadores</a></li>
+          <li><a href="#controle">Controle de Fluxo</a></li>
+          <li><a href="#listas">Listas</a></li>
+        </ul>
+      </li>
+      <li><a href="#Strings" name="openMenu">Strings</a>
+        <ul class="dropDown">
+          <li>Formatação de String</li>
+          <li>Operações, Funções e Métodos</li>
+          <li>Na Prática</li>
+        </ul>
+      </li>
+      <li>Dicionarios</li>
+    </ul>
+    <button data-btn="theme" class="btnTheme" name="changeTheme"></button>
+  </header>
+
+  <main>
+    <div class="animation">
+      <h1 class="titulo" id="introducao">Introdução ao Python<span>.</span></h1>
+      <article class="mainContainer">
+        <div class="column">
+          <section class="content">
+            <h2 class="subtitulo">Conceito de Variáveis</h2>
+            <div>
+              <ul class="lista">
+                <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
+                <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <img src="img/codes/code.png" alt="">
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <img src="img/codes/code2.png" alt="">
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Nomes Reservados</h2>
+            <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
+            <div>
+              <ul class="lista listaPalavras">
+                <li>and</li>
+                <li>as</li>
+                <li>assert</li>
+                <li>break</li>
+                <li>class</li>
+                <li>continue</li>
+                <li>def</li>
+                <li>del</li>
+                <li>elif</li>
+                <li>else</li>
+                <li>except</li>
+                <li>exec</li>
+                <li>finally</li>
+                <li>for</li>
+                <li>from</li>
+                <li>global</li>
+                <li>if</li>
+                <li>import</li>
+                <li>in</li>
+                <li>lambda</li>
+                <li>not</li>
+                <li>or</li>
+                <li>pass</li>
+                <li>print</li>
+                <li>raise</li>
+                <li>return</li>
+                <li>try</li>
+                <li>while</li>
+                <li>with</li>
+                <li>yield</li>
+              </ul>
+            </div>
+          </section>
+          <section class="content ">
+            <h2 class="subtitulo">Tabela de Operadores Aritméticos</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operador</th>
+                  <th>Descrição</th>
+                  <th>Exemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>+</td>
+                  <td>Soma de dois Valores</td>
+                  <td>3 + 2 = 5</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>Subtrai dois Valores</td>
+                  <td>3 - 2 = 1</td>
+                </tr>
+                <tr>
+                  <td>*</td>
+                  <td>Multiplica dois Valores</td>
+                  <td>3 * 2 = 6</td>
+                </tr>
+                <tr>
+                  <td>/</td>
+                  <td>Divide dois valores</td>
+                  <td>3 / 2 = 1.5</td>
+                </tr>
+                <tr>
+                  <td>//</td>
+                  <td>Divide dois valores, porém arrendonda para baixo</td>
+                  <td>3 / 2 = 1</td>
+                </tr>
+                <tr>
+                  <td>%</td>
+                  <td>Resto da Divisão</td>
+                  <td>3 % 2 = 1</td>
+                </tr>
+                <tr>
+                  <td>**</td>
+                  <td>Exponenciação</td>
+                  <td>3 ** 2 = 9</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+        <div class="column">
+          <section class="content">
+            <h2 class="subtitulo">Tipos de Variáveis</h2>
+            <div>
+              <ul class="lista">
+                <li>Inteiro - Números inteiros - (int)</li>
+                <li>Ponto Flutuante - Números decimais - (float)</li>
+                <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
+                <li>Boolean - Pode variar entre True or False - (bool)</li>
+                <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
+                <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
+                <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <img src="img/codes/code.png" alt="">
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <img src="img/codes/code2.png" alt="">
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+          <section class="content ">
+            <h2 class="subtitulo">Tabela de Operadores Lógicos</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operador</th>
+                  <th>Descrição</th>
+                  <th>Exemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>and</td>
+                  <td>"e" lógico</td>
+                  <td>Só se retorna "true" quando todas as condições são verdadeiras</td>
+                </tr>
+                <tr>
+                  <td>or</td>
+                  <td>"ou" lógico</td>
+                  <td>Apenas uma das condições tem que ser verdadeiras</td>
+                </tr>
+                <tr>
+                  <td>not</td>
+                  <td>"não" lógico</td>
+                  <td>Inverte o valor da condição</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="content ">
+            <h2 class="subtitulo">Tabela de Operadores Relacionais</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operador</th>
+                  <th>Descrição</th>
+                  <th>Exemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>==</td>
+                  <td>(bollean) Verifica se dois Valores são iguais</td>
+                  <td>3 == 2 resulta em "False"</td>
+                </tr>
+                <tr>
+                  <td>!=</td>
+                  <td>(bollean) Verifica se dois valores são diferentes</td>
+                  <td>3 != 2 resulta em "True"</td>
+                </tr>
+                <tr>
+                  <td><code>></code></td>
+                  <td>(bollean) Verifica se x é maior que y</td>
+                  <td><code>3 > 2 resulta em "True"</code></td>
+                </tr>
+                <tr>
+                  <td><code><</code></td>
+                  <td>(bollean) Verifica se x é menor que y</td>
+                  <td><code>3 < 2 resulta em "False" </code></td>
+                </tr>
+                <tr>
+                  <td><code>>=</code></td>
+                  <td>(bollean) Verifica se x é maior ou igual a y</td>
+                  <td><code>3 =< 2 resulta em "False" </code></td>
+                </tr>
+                <tr>
+                  <td><code><=</code></td>
+                  <td>(bollean) Verifica se x é menor ou igual a y</td>
+                  <td><code>3 <=  2 resulta em "False" </code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <footer class="footer">
+    <div>
+      <h3>Conheça também:</h3>
+      <a href="https://github.com/Dimitri13Freitas"><img src="img/github.svg" alt="Perfil do desenvolvedor para o Git-Hub."></a>
+    </div>
+    <p>Alguns Direitos reservados <span>&copy;</span><a href="https://github.com/Dimitri13Freitas"> Dimitri Freitas.</a></p>
+  </footer> -->
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
