@@ -40,7 +40,7 @@ function handleClick(event) {
 
 
 async function fetchPage(link) {
-  const response = await fetch(link);
+  response = await fetch(link);
   const pageText = await response.text();
   pushHtml(pageText);
 }
@@ -52,8 +52,8 @@ function pushHtml(html) {
   let AntigoConteudo = document.querySelector('main');
   let novoConteudo = novohtml.querySelector('main');
 
-  AntigoConteudo.innerHTML = novoConteudo.innerHTML;
   document.title = novohtml.querySelector('title').innerText
+  AntigoConteudo.innerHTML = novoConteudo.innerHTML;
 }
 window.addEventListener('popstate', () => {
   fetchPage(window.location);
