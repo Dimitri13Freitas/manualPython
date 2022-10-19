@@ -6,12 +6,24 @@ const btnMenu = document.querySelector('[data-btn="mobile"]');
 btnTheme.addEventListener('click', elemento);
 btnMenu.addEventListener('click', elemento);
 
+function saveTheme() {
+  if(localStorage.theme == 'true') {
+    document.documentElement.classList.add('ativo');
+    btnTheme.classList.toggle('ativo');
+  }
+}
+
 const ativa = {
   element:document,
   classe:'ativo',
   changeTheme() {
     this.element.documentElement.classList.toggle(this.classe);
     btnTheme.classList.toggle(this.classe);
+    if(btnTheme.classList.contains(this.classe)) {
+      localStorage.theme = 'true';
+    } else {
+      localStorage.theme = false;
+    }
   },
   openMenu() {
     menuMobile.classList.toggle(this.classe);
@@ -59,3 +71,6 @@ window.addEventListener('popstate', () => {
   fetchPage(window.location);
 })
 
+window.onload = () => {
+  saveTheme();
+}
