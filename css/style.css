@@ -251,6 +251,9 @@ body {
 .btnTheme.ativo:after {
   left: 23px;
 }
+.introducao img.ativo {
+  display: none;
+}
 
 /* Tabelas */
 table {

@@ -1,6 +1,8 @@
 const btnTheme = document.querySelector('[data-btn="theme"]');
 const menuMobile = document.querySelector('[data-menu="lista"]');
 const btnMenu = document.querySelector('[data-btn="mobile"]');
+const imgIntroducao = document.querySelectorAll('.introducao img');
+
 
 
 btnTheme.addEventListener('click', elemento);
@@ -21,8 +23,16 @@ const ativa = {
     btnTheme.classList.toggle(this.classe);
     if(btnTheme.classList.contains(this.classe)) {
       localStorage.theme = 'true';
+      imgIntroducao.forEach(e => {
+        e.classList.remove(this.classe);
+        imgIntroducao[0].classList.add(this.classe)
+      })
     } else {
       localStorage.theme = false;
+      imgIntroducao.forEach(e => {
+        e.classList.remove(this.classe);
+        imgIntroducao[1].classList.add(this.classe)
+      })
     }
   },
   openMenu() {
@@ -37,7 +47,7 @@ function elemento(event) {
 };
 
 
-// Sem Reload nas paginas 
+// Sem load nas paginas
 const a = document.querySelectorAll('[data-menu="lista"] a');
 
 a.forEach(e => {
