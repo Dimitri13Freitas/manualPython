@@ -14,6 +14,21 @@ function saveTheme() {
     btnTheme.classList.toggle('ativo');
   }
 }
+function imageHome() {
+  if(document.documentElement.classList.contains('ativo')) {
+    localStorage.theme = 'true';
+    imgIntroducao.forEach(e => {
+      e.classList.remove('ativo');
+      imgIntroducao[0].classList.add('ativo');
+    })
+  } else {
+    localStorage.theme = false;
+    imgIntroducao.forEach(e => {
+      e.classList.remove('ativo');
+      imgIntroducao[1].classList.add('ativo')
+    })
+  }
+}
 
 const ativa = {
   element:document,
@@ -21,19 +36,7 @@ const ativa = {
   changeTheme() {
     this.element.documentElement.classList.toggle(this.classe);
     btnTheme.classList.toggle(this.classe);
-    if(btnTheme.classList.contains(this.classe)) {
-      localStorage.theme = 'true';
-      imgIntroducao.forEach(e => {
-        e.classList.remove(this.classe);
-        imgIntroducao[0].classList.add(this.classe)
-      })
-    } else {
-      localStorage.theme = false;
-      imgIntroducao.forEach(e => {
-        e.classList.remove(this.classe);
-        imgIntroducao[1].classList.add(this.classe)
-      })
-    }
+    imageHome();
   },
   openMenu() {
     menuMobile.classList.toggle(this.classe);
@@ -83,4 +86,5 @@ window.addEventListener('popstate', () => {
 
 window.onload = () => {
   saveTheme();
+  imageHome();
 }

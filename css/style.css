@@ -251,9 +251,6 @@ body {
 .btnTheme.ativo:after {
   left: 23px;
 }
-.introducao img.ativo {
-  display: none;
-}
 
 /* Tabelas */
 table {
@@ -279,6 +276,60 @@ th {
 /* Menu Mobile */
 [data-btn="mobile"] {
   display: none;
+}
+
+/* Introducao */
+.introducao {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.introducao img.ativo {
+  display: none;
+}
+.introducao div h1 {
+  margin: 0;
+}
+.introducao div p {
+  font-size: 0.95rem;
+  color: var(--font1);
+  max-width: 472px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+.introducao div a {
+  margin: 10px 0;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--p1);
+  border-radius: 4px;
+  color: var(--bg);
+}
+.introducao div a:hover {
+  color: var(--font1);
+}
+
+/* avisos */
+.avisos {
+  max-width: 1115px;
+  margin: 75px auto;
+}
+.avisos h1 {
+  margin: 0;
+}
+.caixa p {
+  color: var(--font1);
+  font-size: 0.95rem;
+}
+.caixa {
+  margin: 10px 0;
+  max-width: 700px;
+  background: var(--bgContent);
+  padding: 15px;
+  border: var(--bgContent) 2px solid;
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 10px var(--p3);
 }
 
 /* Responsivo */
