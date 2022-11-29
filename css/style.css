@@ -28,6 +28,10 @@ body {
   --font1: #141414;
   --bgContent: rgb(0, 0, 0, 0.1);
 }
+.container {
+  max-width: 1115px;
+  margin: 0 auto;
+}
 
 /* Utilitário */
 .titulo {
@@ -213,6 +217,25 @@ body {
 .footer p a {
   color: var(--font1);
 }
+.footer h3 {
+  color: var(--font1);
+}
+.redes {
+  display: flex;
+  gap: 20px;
+}
+.redes a {
+  /* background: red; */
+  padding: 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.redes a:hover {
+  background: linear-gradient(360deg, var(--p1) -45.5%, var(--bgContent) 38.5%);
+}
+.redes a svg path {
+  width: 34px;
+}
 
 /* Especificos */
 .content > p {
@@ -282,7 +305,7 @@ th {
 .introducao {
   margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .introducao img.ativo {
@@ -309,11 +332,21 @@ th {
 .introducao div a:hover {
   color: var(--font1);
 }
+.introducaoImg {
+  display: flex;
+}
+.introducaoImg img {
+  overflow: hidden;
+  width: 100%;
+}
+.introducao {
+  margin: 25px 30px;
+}
 
 /* avisos */
 .avisos {
   max-width: 1115px;
-  margin: 75px auto;
+  margin: 75px 30px;
 }
 .avisos h1 {
   margin: 0;
@@ -420,6 +453,15 @@ th {
     width: 4px;
     height: 100%;
     left: -10px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    max-width: 900px;
+  }
+  .introducao {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
