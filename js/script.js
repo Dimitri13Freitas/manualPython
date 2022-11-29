@@ -107,8 +107,6 @@ const pre = document.querySelectorAll('pre');
   e.addEventListener('click', () => copy(e));
 });
 
- function copy(e) {
-  var seila = document.createElement('textarea');
-  seila.value = e.firstElementChild.innerText;
-  navigator.clipboard.writeText(seila.value);
- }
+function copy(e) {
+ navigator.clipboard.writeText(e.firstElementChild.innerText);
+}
