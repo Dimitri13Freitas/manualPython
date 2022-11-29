@@ -90,10 +90,10 @@ window.addEventListener('popstate', () => {
 svgList = ['../img/assets/linkedin.svg','../img/assets/github.svg']
 
 function svgIcon(link) {
-    const f = fetch(link).then(r => {
+    const f = fetch(link);
+    f.then(r => {
       return r.text()
     }).then(element => {
-      console.log(element)
       const anchors = document.querySelector('.redes a.teste');
       anchors.innerHTML = element
       anchors.classList.remove('teste');

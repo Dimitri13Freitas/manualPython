@@ -495,3 +495,6 @@ th {
 .animation {
   animation: show-content 0.5s forwards;
 }
+.redes a svg path {
+  fill: var(--font1);
+}
