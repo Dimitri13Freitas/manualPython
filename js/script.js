@@ -104,13 +104,11 @@ window.onload = () => {
 
 const pre = document.querySelectorAll('pre');
  pre.forEach(e => {
-  e.addEventListener('click', () => {
-    copy(e);
-  });
- })
+  e.addEventListener('click', () => copy(e));
+});
 
  function copy(e) {
-  var seila = document.createElement('input');
-  seila.value = 
-  console.log(e.firstElementChild.innerText)
+  var seila = document.createElement('textarea');
+  seila.value = e.firstElementChild.innerText;
+  navigator.clipboard.writeText(seila.value);
  }

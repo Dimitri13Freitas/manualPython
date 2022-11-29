@@ -185,6 +185,7 @@ body {
   background-color: #222222;
   border-radius: 6px;
   position: relative;
+  user-select: none;
 }
 .exemplos pre:hover:after {
   content: "copiar";
