@@ -37,7 +37,7 @@ body {
 .titulo {
   color: var(--font1);
   font-size: 3.5rem;
-  margin: 65px 0 15px 45px;
+  margin: 65px 0 45px 45px;
 }
 .titulo span {
   color: var(--p1);
@@ -151,6 +151,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: 25px;
+  margin: 10px;
 }
 .mainContainer .column {
   display: flex;
@@ -166,12 +167,6 @@ body {
 .content > div {
   margin-top: 12px;
 }
-/* .exemplos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-} */
 .exemplos img {
   max-width: calc(100% - 150px);
   margin-top: 8px;
@@ -181,9 +176,28 @@ body {
   color: var(--font1);
   font-size: 1.3rem;
 }
-/* .lista .exemplos {
-  align-self: center;
-} */
+.exemplos pre code {
+  font-size: 0.95rem;
+  font-family: "Fira Code", monospace;
+  color: #f1f1f1;
+}
+.exemplos pre {
+  background-color: #222222;
+  border-radius: 6px;
+  position: relative;
+}
+.exemplos pre:hover:after {
+  content: "copiar";
+  color: var(--p2);
+  background-color: var(--p1);
+  padding: 5px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: show-down 0.3s;
+}
 .lista {
   color: var(--font1);
   display: flex;
@@ -225,7 +239,6 @@ body {
   gap: 20px;
 }
 .redes a {
-  /* background: red; */
   padding: 0;
   padding: 10px;
   border-radius: 5px;
@@ -385,6 +398,7 @@ th {
   }
   .mainContainer {
     flex-wrap: wrap;
+    margin: 0 15px;
   }
   .header > div {
     position: relative;
@@ -466,6 +480,16 @@ th {
 }
 
 /* Animações */
+@keyframes show-down {
+  from {
+    transform: translate3d(5px, -5px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 @keyframes show-left {
   from {
     transform: translate3d(-10px, 0, 0);
@@ -497,4 +521,7 @@ th {
 }
 .redes a svg path {
   fill: var(--font1);
+}
+.remove {
+  display: none;
 }

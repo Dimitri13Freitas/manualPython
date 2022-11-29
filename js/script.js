@@ -3,8 +3,6 @@ const menuMobile = document.querySelector('[data-menu="lista"]');
 const btnMenu = document.querySelector('[data-btn="mobile"]');
 const imgIntroducao = document.querySelectorAll('.introducao img');
 
-
-
 btnTheme.addEventListener('click', elemento);
 btnMenu.addEventListener('click', elemento);
 
@@ -49,7 +47,6 @@ function elemento(event) {
   ativa[nome](nome);
 };
 
-
 // Sem load nas paginas
 const a = document.querySelectorAll('[data-menu="lista"] a');
 
@@ -84,9 +81,6 @@ window.addEventListener('popstate', () => {
   fetchPage(window.location);
 })
 
-
-
-
 svgList = ['../img/assets/linkedin.svg','../img/assets/github.svg']
 
 function svgIcon(link) {
@@ -108,3 +102,15 @@ window.onload = () => {
   })
 }
 
+const pre = document.querySelectorAll('pre');
+ pre.forEach(e => {
+  e.addEventListener('click', () => {
+    copy(e);
+  });
+ })
+
+ function copy(e) {
+  var seila = document.createElement('input');
+  seila.value = 
+  console.log(e.firstElementChild.innerText)
+ }
