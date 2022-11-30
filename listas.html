@@ -30,14 +30,22 @@
           <li><a href="listas.html">Listas</a></li>
         </ul>
       </li>
-      <li><a href="#Strings" name="openMenu">Strings</a>
+      <li>Strings
         <ul class="dropDown">
-          <li>Formatação de String</li>
-          <li>Operações, Funções e Métodos</li>
-          <li>Na Prática</li>
+          <li><a href="stringForm.html">Formatação de String</a></li>
+          <li><a href="operaString.html">Operações, Funções e Métodos</a></li>
+        </ul>
+      </li>
+      <li>Seminarios
+        <ul class="dropDown">
+          <li>Funções</li>
+          <li>Matrizes</li>
+          <li>Ordenação</li>
+          <li>Busca</li>
         </ul>
       </li>
       <li>Dicionarios</li>
+      <li>Arquivos</li>
     </ul>
     <button data-btn="theme" class="btnTheme" name="changeTheme"></button>
   </header>
@@ -53,17 +61,61 @@
             <h2 class="subtitulo">Arrays</h2>
             <div>
               <ul class="lista">
-                <li>É um conjunto sequencial que pode ter valores de qualquer
-                  tipo, incluindo outras listas</li>
+                <li>É um conjunto sequencial que pode ter valores de qualquer tipo, incluindo outras listas.</li>
                 <li>Para alterar um elemento da lista, basta fazer uma atribuição de valor usando o índice de onde este valor está dentro da lista. </li>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
-                    <img src="img/codes/code.png" alt="">
+                    <pre>
+                      <code>
+  x = [1, 2, 3, 4]
+  x[1] = 8
+
+  print(x)
+                      </code>
+                    </pre>
                   </div>
                   <div>
                     <p>Retorna:</p>
-                    <img src="img/codes/code2.png" alt="">
+                    <pre>
+                      <code>
+  [1, 8, 3, 4]
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Interação em uma Lista</h2>
+            <div>
+              <ul class="lista">
+                <p>Podemos interagir com os diversos itens de uma lista usando laçoes de repetição ou condicionais.</p>
+                <p>O exemplo abaixo é uma lógica simples somando todos os valores de um array.</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  x = [10, 15, 35, 45, 50, 75]
+
+  aux = 0
+
+  for i in range(len(x)):
+      aux += x[i]
+
+  print(aux)
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <pre>
+                      <code>
+  230
+                      </code>
+                    </pre>
                   </div>
                 </div>
               </ul>
@@ -72,20 +124,49 @@
         </div>
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">seila</h2>
+            <h2 class="subtitulo">Tuplas</h2>
             <div>
               <ul class="lista">
-                <li></li>
+                <p>Tuplas são definidas com "()".</p>
+                <p>Basicamente funcionam do mesmo jeito que um array, porém, não é possivel redefinir os valores de dentro dela.</p>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
-                    <img src="img/codes/code.png" alt="">
+                    <pre>
+                      <code>
+  x = (1, 2, 3, 4)
+  x[1]=8
+  print(x)  
+                      </code>
+                    </pre>
                   </div>
                   <div>
                     <p>Retorna:</p>
-                    <img src="img/codes/code2.png" alt="">
+                    <pre>
+                      <code>
+  TypeError: 'tuple' object does not support
+  item assignment
+                      </code>
+                    </pre>
                   </div>
                 </div>
+              </ul>
+            </div>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Métodos de Listas</h2>
+            <div>
+              <ul class="lista">
+                <p>Os métodos a seguir funcionam tanto para listas quanto para tuplas.</p>
+                <li>len - Retorna o tamanho da lista</li>
+                <li>min - Retorna o menor valor da lista</li>
+                <li>max - Retorna o maior valor da lista</li>
+                <li>sum - retorna soma dos elementos da lista</li>
+                <li>append - adiciona um novo valor no final da lista</li>
+                <li>extend - insere uma lista no final de outra lista</li>
+                <li>del - remove um elemento da lista, dado seu indice</li>
+                <li>in - verifica se um valor pertence à lista</li>
+                <li>sort - ordena a lista em ordem crescente</li>
               </ul>
             </div>
           </section>

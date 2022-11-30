@@ -52,22 +52,24 @@
 
   <main>
     <div class="animation">
-      <h1 class="titulo" id="introducao">Introdução ao Python<span>.</span></h1>
+      <h1 class="titulo" id="introducao">Formatação de String<span>.</span></h1>
       <article class="mainContainer">
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Conceito de Variáveis</h2>
+            <h2 class="subtitulo">String</h2>
             <div>
               <ul class="lista">
-                <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
-                <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
+                <p>Uma sequencia de caracteres entre aspas simples ou aspas duplas configura uma string.</p>
+                <p> Em Python, Strings são representadas como listas imutáveis de caracteres.</p>
+                <p>Podemos representar uma String como uma sequência de caracteres entre aspas simples (') ou aspas duplas (").</p>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  var = 10
-  print(var)
+  x = 'Eu tenho 32'
+  y = "anos de Idade"
+  print(x + " " + y)
                       </code>
                     </pre>
                   </div>
@@ -75,137 +77,49 @@
                     <p>Retorna:</p>
                     <pre>
                       <code>
-  10                        
+  Eu tenho 32 anos de Idade                     
                       </code>
                     </pre>
                   </div>
                 </div>
+                <p>OBS: Quando concatenamos duas strings, caso queira espaço entre os dois valores das variaveis é nescessario atribuir uma string com espaço.</p>
+                <p>Caso queira eliminar este processo, pois não nescessidade de concatenar, use virgulas entre as variaveis</p>
               </ul>
             </div>
           </section>
           <section class="content">
-            <h2 class="subtitulo">Nomes Reservados</h2>
-            <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
-            <div>
-              <ul class="lista listaPalavras">
-                <li>and</li>
-                <li>as</li>
-                <li>assert</li>
-                <li>break</li>
-                <li>class</li>
-                <li>continue</li>
-                <li>def</li>
-                <li>del</li>
-                <li>elif</li>
-                <li>else</li>
-                <li>except</li>
-                <li>exec</li>
-                <li>finally</li>
-                <li>for</li>
-                <li>from</li>
-                <li>global</li>
-                <li>if</li>
-                <li>import</li>
-                <li>in</li>
-                <li>lambda</li>
-                <li>not</li>
-                <li>or</li>
-                <li>pass</li>
-                <li>print</li>
-                <li>raise</li>
-                <li>return</li>
-                <li>try</li>
-                <li>while</li>
-                <li>with</li>
-                <li>yield</li>
-              </ul>
-            </div>
-          </section>
-          <section class="content">
-            <h2 class="subtitulo">Tabela de Operadores Aritméticos</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>+</td>
-                  <td>Soma de dois Valores</td>
-                  <td>3 + 2 = 5</td>
-                </tr>
-                <tr>
-                  <td>-</td>
-                  <td>Subtrai dois Valores</td>
-                  <td>3 - 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>*</td>
-                  <td>Multiplica dois Valores</td>
-                  <td>3 * 2 = 6</td>
-                </tr>
-                <tr>
-                  <td>/</td>
-                  <td>Divide dois valores</td>
-                  <td>3 / 2 = 1.5</td>
-                </tr>
-                <tr>
-                  <td>//</td>
-                  <td>Divide dois valores, porém arrendonda para baixo</td>
-                  <td>3 / 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>%</td>
-                  <td>Resto da Divisão</td>
-                  <td>3 % 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>**</td>
-                  <td>Exponenciação</td>
-                  <td>3 ** 2 = 9</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <!-- adicionar aqui -->
-        </div>
-        <div class="column">
-          <section class="content">
-            <h2 class="subtitulo">Tipos de Variáveis</h2>
+            <h2 class="subtitulo">Caracteres Especiais</h2>
+            <p>dentro de uma string ainda sim podemos executar alguns comandos especias, dentre eles:</p>
             <div>
               <ul class="lista">
-                <li>Inteiro - Números inteiros - (int)</li>
-                <li>Ponto Flutuante - Números decimais - (float)</li>
-                <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
-                <li>Boolean - Pode variar entre True or False - (bool)</li>
-                <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
-                <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
-                <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
+                <li>\ - Escapa um caracter de ser interpretado pela linguagem.</li>
+                <li>\n - Quebra de linha</li>
+                <li>\t - Tab equivalente a 8 espaços</li>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  inteiro = 5
+  escapa = 'Dimitri\'s Burguer.'
+  quebra = "Dimitri \né divertido."
+  tab = "Dimitri é\tbonito."
+  
+  print(escapa)
+  print(quebra)
+  print(tab)
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <pre>
+                      <code>
+  Dimitri's Burguer.
 
-  pontoFlutuante = 7.43
+  Dimitri 
+  é divertido.
 
-  string = 'Isto é uma string'
-
-  boolean = true
-
-  list = [1,2,3,4]
-
-  tuple = ("a","b","c","d")
-
-  dicionario = {
-    "horas": 6,
-    "minutos": 33,
-    "segundos": 13
-  }
+  Dimitri é       bonito.               
                       </code>
                     </pre>
                   </div>
@@ -213,78 +127,68 @@
               </ul>
             </div>
           </section>
-          <section class="content ">
-            <h2 class="subtitulo">Tabela de Operadores Lógicos</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>and</td>
-                  <td>"e" lógico</td>
-                  <td>Só se retorna "true" quando todas as condições são verdadeiras</td>
-                </tr>
-                <tr>
-                  <td>or</td>
-                  <td>"ou" lógico</td>
-                  <td>Apenas uma das condições tem que ser verdadeiras</td>
-                </tr>
-                <tr>
-                  <td>not</td>
-                  <td>"não" lógico</td>
-                  <td>Inverte o valor da condição</td>
-                </tr>
-              </tbody>
-            </table>
+
+          <!-- adicionar aqui -->
+        </div>
+        <div class="column">
+          <section class="content">
+            <h2 class="subtitulo">String Especial</h2>
+            <div>
+              <ul class="lista">
+                <p>Em strnigs também é possivel passar uma variavel sem o uso de virgulas ou concatenização de valores.</p>
+                <p>Isso só é possivel declarando a letra "f" no fora da string, assim a string em questão ja esta definida como uma string especial.</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  idade = 10
+  print(f'Eu tenho {idade} anos de idade')
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <pre>
+                      <code>
+  Eu tenho 10 anos de idade
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </ul>
+            </div>
           </section>
-          <section class="content ">
-            <h2 class="subtitulo">Tabela de Operadores Relacionais</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>==</td>
-                  <td>(bollean) Verifica se dois Valores são iguais</td>
-                  <td>3 == 2 resulta em "False"</td>
-                </tr>
-                <tr>
-                  <td>!=</td>
-                  <td>(bollean) Verifica se dois valores são diferentes</td>
-                  <td>3 != 2 resulta em "True"</td>
-                </tr>
-                <tr>
-                  <td><code>></code></td>
-                  <td>(bollean) Verifica se x é maior que y</td>
-                  <td><code>3 > 2 resulta em "True"</code></td>
-                </tr>
-                <tr>
-                  <td><code><</code></td>
-                  <td>(bollean) Verifica se x é menor que y</td>
-                  <td><code>3 < 2 resulta em "False" </code></td>
-                </tr>
-                <tr>
-                  <td><code>>=</code></td>
-                  <td>(bollean) Verifica se x é maior ou igual a y</td>
-                  <td><code>3 =< 2 resulta em "False" </code></td>
-                </tr>
-                <tr>
-                  <td><code><=</code></td>
-                  <td>(bollean) Verifica se x é menor ou igual a y</td>
-                  <td><code>3 <=  2 resulta em "False" </code></td>
-                </tr>
-              </tbody>
-            </table>
+          <section class="content">
+            <h2 class="subtitulo">Formatação de strings</h2>
+            <ul class="lista">
+              <p>Uma das formas de formatar uma String é utilizando a função format.</p>
+              <p>A função format recebe como parâmetros um valor e uma string com a formatação desejada.</p>
+              <p>Para cada tipo de dao é nescessario um tipo de parametro diferente, entre eles estão:</p>
+              <li>d - Para Decimais</li>
+              <li>+d - Decimais com sinal</li>
+              <li>f - Para numeros reais</li>
+              <li>f+ - Para numeros reais com sinal</li>
+              <li>+.10f - Para numeros reais cmo sinais e prescisão</li>
+              <div class="exemplos">
+                <div>
+                  <p>Exemplo:</p>
+                  <pre>
+                    <code>
+  print(format(3.14159265359, "+.5f"))
+                    </code>
+                  </pre>
+                </div>
+                <div>
+                  <p>Retorna:</p>
+                  <pre>
+                    <code>
+  +3.14159
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </ul>
           </section>
         </div>
       </article>

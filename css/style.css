@@ -167,10 +167,11 @@ body {
 .content > div {
   margin-top: 12px;
 }
-.exemplos img {
-  max-width: calc(100% - 150px);
-  margin-top: 8px;
-  margin-left: 45px;
+.exemplos div {
+  margin-top: 7px;
+}
+.exemplos > p {
+  margin: 20px 0;
 }
 .exemplos div p {
   color: var(--font1);
@@ -380,15 +381,20 @@ th {
 }
 
 /* Responsivo */
+@media (max-width: 1000px) {
+  .container {
+    max-width: 900px;
+  }
+  .introducao {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 @media (max-width: 800px) {
   .header {
     padding: 20px 20px;
     justify-content: space-between;
     border-image: linear-gradient(30deg, var(--p2) 25%, var(--p1)) 1;
-  }
-  .exemplos img {
-    max-width: 100%;
-    margin: 0;
   }
   table {
     font-size: 0.875rem;
@@ -460,6 +466,11 @@ th {
     display: none;
   }
 }
+@media (max-width: 500px) {
+  .exemplos pre code {
+    font-size: 0.85rem;
+  }
+}
 @media (max-width: 380px) {
   [data-menu="lista"] {
     top: 100px;
@@ -468,15 +479,6 @@ th {
     width: 4px;
     height: 100%;
     left: -10px;
-  }
-}
-@media (max-width: 1000px) {
-  .container {
-    max-width: 900px;
-  }
-  .introducao {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
