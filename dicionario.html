@@ -52,22 +52,109 @@
 
   <main>
     <div class="animation">
-      <h1 class="titulo" id="introducao">Introdução ao Python<span>.</span></h1>
+      <h1 class="titulo" id="introducao">Dicionarios<span>.</span></h1>
       <article class="mainContainer">
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Conceito de Variáveis</h2>
+            <h2 class="subtitulo">Sitaxe</h2>
             <div>
               <ul class="lista">
-                <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
-                <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
+                <p>Um dicionario é uma variavel com variaveis dentro dela, assim podendo guardar valores em um só lugar.</p>
+                <p>Sua sintaxe é diferente do custume para abrir um dicionario usamos "{}" logo após o nome da variavel.</p>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  var = 10
-  print(var)
+  dict = {}
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <p>No exemplo acima já temos um dicionario, porém sem nenhum valor dentro dele.</p>
+                <p>Para colocarmos algum valor ali utilizaremos aspas duplas ou simples para nomear mais uma variavel dentro de "dicionarios" que ja criamos.</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  dict = {
+    "nome": 'Dimitri'
+  }
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <p>Para a atribuição de valor da variavel "nome" utilizaremos ":", pois é a sintaxe de um dicionario.</p>
+                <p>Assim agora podendo adicionar quantos valores você quiser usando ",".</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  dict = {
+    "nome": 'Dimitri',
+    "idade": 10,
+    "altura": 1.70
+  }
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <p>OBS: O último item de um dicionario não pode conter virgula, pois o python intende que pode exitir mais um item na sequência.</p>
+              </ul>
+            </div>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Removendo valores</h2>
+            <p>Para removermos um valor de um dicionario usamos o "pop". Passando como paramentro o nome do valor que deseja ser removido.</p>
+            <p>Atribuindo sempre a outra variavel o seu resultado.</p>
+            <ul class="lista">
+              <div class="exemplos">
+                <div>
+                  <pre>
+                    <code>
+  dict = {
+    "nome": 'Dimitri',
+    "idade": 10,
+    "altura": 1.70
+  }
+  dictSemAltura = dict.pop("altura")
+  print(dict)
+                    </code>
+                  </pre>
+                </div>
+                <div>
+                  <p>Retorna:</p>
+                  <pre>
+                    <code>
+  {'nome': 'Italo', 'idade': 23}
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </ul>
+          </section>
+          <!-- adicionar aqui -->
+        </div>
+        <div class="column">
+          <section class="content">
+            <h2 class="subtitulo">Acessando um Dicionario</h2>
+            <div>
+              <ul class="lista">
+                <p>Para se aceesar qualquer um dos valores colocados em um dicionario usamos o mesmo metodo de uma lista usando "[]".</p>
+                <p>Porém ao invés de se passar um indice passamos o nome da variavel.</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  dict = {
+    "nome": 'Dimitri',
+    "idade": 18,
+    "altura": 1.70
+  }
+  print(dict["idade"])
                       </code>
                     </pre>
                   </div>
@@ -75,7 +162,7 @@
                     <p>Retorna:</p>
                     <pre>
                       <code>
-  10                        
+  18
                       </code>
                     </pre>
                   </div>
@@ -83,208 +170,82 @@
               </ul>
             </div>
           </section>
-          <section class="content">
-            <h2 class="subtitulo">Nomes Reservados</h2>
-            <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
-            <div>
-              <ul class="lista listaPalavras">
-                <li>and</li>
-                <li>as</li>
-                <li>assert</li>
-                <li>break</li>
-                <li>class</li>
-                <li>continue</li>
-                <li>def</li>
-                <li>del</li>
-                <li>elif</li>
-                <li>else</li>
-                <li>except</li>
-                <li>exec</li>
-                <li>finally</li>
-                <li>for</li>
-                <li>from</li>
-                <li>global</li>
-                <li>if</li>
-                <li>import</li>
-                <li>in</li>
-                <li>lambda</li>
-                <li>not</li>
-                <li>or</li>
-                <li>pass</li>
-                <li>print</li>
-                <li>raise</li>
-                <li>return</li>
-                <li>try</li>
-                <li>while</li>
-                <li>with</li>
-                <li>yield</li>
-              </ul>
-            </div>
-          </section>
-          <section class="content">
-            <h2 class="subtitulo">Tabela de Operadores Aritméticos</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>+</td>
-                  <td>Soma de dois Valores</td>
-                  <td>3 + 2 = 5</td>
-                </tr>
-                <tr>
-                  <td>-</td>
-                  <td>Subtrai dois Valores</td>
-                  <td>3 - 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>*</td>
-                  <td>Multiplica dois Valores</td>
-                  <td>3 * 2 = 6</td>
-                </tr>
-                <tr>
-                  <td>/</td>
-                  <td>Divide dois valores</td>
-                  <td>3 / 2 = 1.5</td>
-                </tr>
-                <tr>
-                  <td>//</td>
-                  <td>Divide dois valores, porém arrendonda para baixo</td>
-                  <td>3 / 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>%</td>
-                  <td>Resto da Divisão</td>
-                  <td>3 % 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>**</td>
-                  <td>Exponenciação</td>
-                  <td>3 ** 2 = 9</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <!-- adicionar aqui -->
-        </div>
-        <div class="column">
-          <section class="content">
-            <h2 class="subtitulo">Tipos de Variáveis</h2>
-            <div>
-              <ul class="lista">
-                <li>Inteiro - Números inteiros - (int)</li>
-                <li>Ponto Flutuante - Números decimais - (float)</li>
-                <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
-                <li>Boolean - Pode variar entre True or False - (bool)</li>
-                <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
-                <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
-                <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
-                <div class="exemplos">
-                  <div>
-                    <p>Exemplo:</p>
-                    <pre>
-                      <code>
-  inteiro = 5
-
-  pontoFlutuante = 7.43
-
-  string = 'Isto é uma string'
-
-  boolean = true
-
-  list = [1,2,3,4]
-
-  tuple = ("a","b","c","d")
-
-  dicionario = {
-    "horas": 6,
-    "minutos": 33,
-    "segundos": 13
+          <section class="content ">
+            <h2 class="subtitulo">Métodos de um Dicionario</h2>
+            <ul class="lista">
+              <li>Método "keys" retorna todos os nomes das variaveis dentro de um dicionario, em uma lista.</li>
+              <div class="exemplos">
+                <div>
+                  <p>Exemplo:</p>
+                  <pre>
+                    <code>
+  dict = {
+    "nome": 'Dimitri',
+    "idade": 18,
+    "altura": 1.70
   }
-                      </code>
-                    </pre>
-                  </div>
+  print(dict.keys())
+                    </code>
+                  </pre>
                 </div>
-              </ul>
-            </div>
-          </section>
-          <section class="content ">
-            <h2 class="subtitulo">Tabela de Operadores Lógicos</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>and</td>
-                  <td>"e" lógico</td>
-                  <td>Só se retorna "true" quando todas as condições são verdadeiras</td>
-                </tr>
-                <tr>
-                  <td>or</td>
-                  <td>"ou" lógico</td>
-                  <td>Apenas uma das condições tem que ser verdadeiras</td>
-                </tr>
-                <tr>
-                  <td>not</td>
-                  <td>"não" lógico</td>
-                  <td>Inverte o valor da condição</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="content ">
-            <h2 class="subtitulo">Tabela de Operadores Relacionais</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>==</td>
-                  <td>(bollean) Verifica se dois Valores são iguais</td>
-                  <td>3 == 2 resulta em "False"</td>
-                </tr>
-                <tr>
-                  <td>!=</td>
-                  <td>(bollean) Verifica se dois valores são diferentes</td>
-                  <td>3 != 2 resulta em "True"</td>
-                </tr>
-                <tr>
-                  <td><code>></code></td>
-                  <td>(bollean) Verifica se x é maior que y</td>
-                  <td><code>3 > 2 resulta em "True"</code></td>
-                </tr>
-                <tr>
-                  <td><code><</code></td>
-                  <td>(bollean) Verifica se x é menor que y</td>
-                  <td><code>3 < 2 resulta em "False" </code></td>
-                </tr>
-                <tr>
-                  <td><code>>=</code></td>
-                  <td>(bollean) Verifica se x é maior ou igual a y</td>
-                  <td><code>3 =< 2 resulta em "False" </code></td>
-                </tr>
-                <tr>
-                  <td><code><=</code></td>
-                  <td>(bollean) Verifica se x é menor ou igual a y</td>
-                  <td><code>3 <=  2 resulta em "False" </code></td>
-                </tr>
-              </tbody>
-            </table>
+                <div>
+                  <p>Retorna:</p>
+                  <pre>
+                    <code>
+  dict_keys(['nome', 'idade', 'altura'])
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <li>Método "values" retorna todos os valores vinculados as variaveis dentro de um dicionario, em uma lista.</li>
+              <div class="exemplos">
+                <div>
+                  <p>Exemplo:</p>
+                  <pre>
+                    <code>
+  dict = {
+    "nome": 'Dimitri',
+    "idade": 18,
+    "altura": 1.70
+  }
+  print(dict.values())
+                    </code>
+                  </pre>
+                </div>
+                <div>
+                  <p>Retorna:</p>
+                  <pre>
+                    <code>
+  dict_values(['Dimitri', 18, 1.7])
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <li>Método "items" retorna os dois juntos, ou seja, nome e valor juntos em uma lista.</li>
+              <div class="exemplos">
+                <div>
+                  <p>Exemplo:</p>
+                  <pre>
+                    <code>
+  dict = {
+    "nome": 'Dimitri',
+    "idade": 18,
+    "altura": 1.70
+  }
+  print(dict.items())
+                    </code>
+                  </pre>
+                </div>
+                <div>
+                  <p>Retorna:</p>
+                  <pre>
+                    <code>
+  ([('nome', 'Dimitri'), ('idade', 18), ('altura', 1.7)])
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </ul>
           </section>
         </div>
       </article>

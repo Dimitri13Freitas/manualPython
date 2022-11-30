@@ -52,22 +52,96 @@
 
   <main>
     <div class="animation">
-      <h1 class="titulo" id="introducao">Introdução ao Python<span>.</span></h1>
+      <h1 class="titulo" id="introducao">Arquivos<span>.</span></h1>
       <article class="mainContainer">
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Conceito de Variáveis</h2>
+            <h2 class="subtitulo">Introdução arquivo</h2>
             <div>
               <ul class="lista">
-                <li>Variaveis são espaços reservados na memória para armazenar informação.</li>
-                <li>Uma das exclusividades do python é que não é nescessario declarar o tipo da variavel, apenas nome e valor.</li>
+                <p>Para iniciarmos a interação com arquivos usando python.</p>
+                <p>Temos que primeiro associalo a uma variavel, usando o metodo "open".</p>
+                <p>O metodo "open" vai receber o endereço onde o aruivo reside em sua pasta e o modo como deseja abrir o arquivo.</p>
+                <li>"r" - Leitura: nesse modo podemos somente ler os dados do arquivo.</li>
+                <li>"w" - Escrita: nesse modo podemos escrever/modificar os dados do arquivo.</li>
+                <li>"r+" - Leitura/escrita: nesse modo podemos ler e também escrever/modificar os dados do arquivo.</li>
+                <li>"a" - Anexação: nesse modo podemos somente adicionar novos dados no final do arquivo.</li>
+                <p>Considerando um arquivo chamado teste.txt na raiz, segue o Exemplo abaixo:</p>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  var = 10
-  print(var)
+  arq = open("teste.txt", "w")
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <p>O valor de Retorno da Variavel "arq" vai não é muito util sozinho, porém existem funções e métodos que junto deste retorno nos dará varias opções.</p>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Escrevendo em arquivo</h2>
+            <p>Para conseguirmos escrever em um arquivo é nescessario abrir no modo "w", "r+" ou "a"</p>
+            <p>Sempre que abrimos um arquivo com intençao de editalo temos que usar o "close" para fecharmos o arquivo.</p>
+            <p>Usando o metodo "write" podemos defininr como parametro o valor que ira escrever no arquivo.</p>
+            <p>Se seu arquivo ja possui algum valor dentro dele, este valor sera apagado e substituido pelo valor definido.</p>
+            <ul class="lista">
+              <div class="exemplos">
+                <div>
+                  <pre>
+                    <code>
+   arq = open("teste.txt", "w")
+   texto = arq.write('Bom dia')
+   arq.close()
+    
+   arq = open("teste.txt", "r")
+   texto = arq.read()
+   arq.close()
+
+   print(texto)
+                    </code>
+                  </pre>
+                </div>
+                <div>
+                  <p>Retorna:</p>
+                  <pre>
+                    <code>
+  Bom dia
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </ul>
+          </section>
+          <!-- adicionar aqui -->
+        </div>
+        <div class="column">
+          <section class="content">
+            <h2 class="subtitulo">Acessando um arquivo</h2>
+            <div>
+              <ul class="lista">
+                <p>Para o acesso a um arquivo devemos utilizar o modo de leitura "r" ou "r+".</p>
+                <p>Utilizando o metodo "read" podemos colocar quantos caracteres desejamos q sejam retornados.</p>
+                <p>Caso não tenha valor sera retornado todo o valor dentro do arquivo.</p>
+                <p>Considerando a existencia de um arquivo teste.txt com:</p>
+                <div class="exemplos">
+                  <div>
+                    <pre>
+                      <code>
+  Arquivos 
+  e 
+  Métodos
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  arq = open("teste.txt", "r")
+  texto = arq.read()
+
+  print(texto)
                       </code>
                     </pre>
                   </div>
@@ -75,216 +149,16 @@
                     <p>Retorna:</p>
                     <pre>
                       <code>
-  10                        
+  Arquivos
+  e
+  MÃ©todos
                       </code>
                     </pre>
                   </div>
+                  <p>OBS: A leitura não tem suporte para caracteres especiais.</p>
                 </div>
               </ul>
             </div>
-          </section>
-          <section class="content">
-            <h2 class="subtitulo">Nomes Reservados</h2>
-            <p>Estas são palavras que não podem ser usadas para nomear uma variavel, função ou objeto.</p>
-            <div>
-              <ul class="lista listaPalavras">
-                <li>and</li>
-                <li>as</li>
-                <li>assert</li>
-                <li>break</li>
-                <li>class</li>
-                <li>continue</li>
-                <li>def</li>
-                <li>del</li>
-                <li>elif</li>
-                <li>else</li>
-                <li>except</li>
-                <li>exec</li>
-                <li>finally</li>
-                <li>for</li>
-                <li>from</li>
-                <li>global</li>
-                <li>if</li>
-                <li>import</li>
-                <li>in</li>
-                <li>lambda</li>
-                <li>not</li>
-                <li>or</li>
-                <li>pass</li>
-                <li>print</li>
-                <li>raise</li>
-                <li>return</li>
-                <li>try</li>
-                <li>while</li>
-                <li>with</li>
-                <li>yield</li>
-              </ul>
-            </div>
-          </section>
-          <section class="content">
-            <h2 class="subtitulo">Tabela de Operadores Aritméticos</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>+</td>
-                  <td>Soma de dois Valores</td>
-                  <td>3 + 2 = 5</td>
-                </tr>
-                <tr>
-                  <td>-</td>
-                  <td>Subtrai dois Valores</td>
-                  <td>3 - 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>*</td>
-                  <td>Multiplica dois Valores</td>
-                  <td>3 * 2 = 6</td>
-                </tr>
-                <tr>
-                  <td>/</td>
-                  <td>Divide dois valores</td>
-                  <td>3 / 2 = 1.5</td>
-                </tr>
-                <tr>
-                  <td>//</td>
-                  <td>Divide dois valores, porém arrendonda para baixo</td>
-                  <td>3 / 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>%</td>
-                  <td>Resto da Divisão</td>
-                  <td>3 % 2 = 1</td>
-                </tr>
-                <tr>
-                  <td>**</td>
-                  <td>Exponenciação</td>
-                  <td>3 ** 2 = 9</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <!-- adicionar aqui -->
-        </div>
-        <div class="column">
-          <section class="content">
-            <h2 class="subtitulo">Tipos de Variáveis</h2>
-            <div>
-              <ul class="lista">
-                <li>Inteiro - Números inteiros - (int)</li>
-                <li>Ponto Flutuante - Números decimais - (float)</li>
-                <li>String - Qualquer tipo de caracter entre aspas - (str)</li>
-                <li>Boolean - Pode variar entre True or False - (bool)</li>
-                <li>List - É um conjundo de elementos que podem variar entre os tipos que estão listados a cima - (list)</li>
-                <li>Tuple - É a mesma coisa que a lista, porém os valores não podem ser alterados após sua definição - (list)</li>
-                <li>Dictionary - é um grupo de variaveis dentro de uma variavel pai - (dic)</li>
-                <div class="exemplos">
-                  <div>
-                    <p>Exemplo:</p>
-                    <pre>
-                      <code>
-  inteiro = 5
-
-  pontoFlutuante = 7.43
-
-  string = 'Isto é uma string'
-
-  boolean = true
-
-  list = [1,2,3,4]
-
-  tuple = ("a","b","c","d")
-
-  dicionario = {
-    "horas": 6,
-    "minutos": 33,
-    "segundos": 13
-  }
-                      </code>
-                    </pre>
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </section>
-          <section class="content ">
-            <h2 class="subtitulo">Tabela de Operadores Lógicos</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>and</td>
-                  <td>"e" lógico</td>
-                  <td>Só se retorna "true" quando todas as condições são verdadeiras</td>
-                </tr>
-                <tr>
-                  <td>or</td>
-                  <td>"ou" lógico</td>
-                  <td>Apenas uma das condições tem que ser verdadeiras</td>
-                </tr>
-                <tr>
-                  <td>not</td>
-                  <td>"não" lógico</td>
-                  <td>Inverte o valor da condição</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="content ">
-            <h2 class="subtitulo">Tabela de Operadores Relacionais</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Operador</th>
-                  <th>Descrição</th>
-                  <th>Exemplo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>==</td>
-                  <td>(bollean) Verifica se dois Valores são iguais</td>
-                  <td>3 == 2 resulta em "False"</td>
-                </tr>
-                <tr>
-                  <td>!=</td>
-                  <td>(bollean) Verifica se dois valores são diferentes</td>
-                  <td>3 != 2 resulta em "True"</td>
-                </tr>
-                <tr>
-                  <td><code>></code></td>
-                  <td>(bollean) Verifica se x é maior que y</td>
-                  <td><code>3 > 2 resulta em "True"</code></td>
-                </tr>
-                <tr>
-                  <td><code><</code></td>
-                  <td>(bollean) Verifica se x é menor que y</td>
-                  <td><code>3 < 2 resulta em "False" </code></td>
-                </tr>
-                <tr>
-                  <td><code>>=</code></td>
-                  <td>(bollean) Verifica se x é maior ou igual a y</td>
-                  <td><code>3 =< 2 resulta em "False" </code></td>
-                </tr>
-                <tr>
-                  <td><code><=</code></td>
-                  <td>(bollean) Verifica se x é menor ou igual a y</td>
-                  <td><code>3 <=  2 resulta em "False" </code></td>
-                </tr>
-              </tbody>
-            </table>
           </section>
         </div>
       </article>
