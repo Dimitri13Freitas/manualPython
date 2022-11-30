@@ -81,25 +81,9 @@ window.addEventListener('popstate', () => {
   fetchPage(window.location);
 })
 
-svgList = ['../img/assets/linkedin.svg','../img/assets/github.svg']
-
-function svgIcon(link) {
-    const f = fetch(link);
-    f.then(r => {
-      return r.text()
-    }).then(element => {
-      const anchors = document.querySelector('.redes a.teste');
-      anchors.innerHTML = element
-      anchors.classList.remove('teste');
-    })
-  }
-
 window.onload = () => {
   saveTheme();
   imageHome();
-  svgList.forEach(e => {
-    svgIcon(e)
-  })
 }
 
 const pre = document.querySelectorAll('pre');
