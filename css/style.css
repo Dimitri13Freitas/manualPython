@@ -19,6 +19,7 @@ body {
   --bg: #2c2c2c;
   --font1: #f1f1f1;
   --bgContent: rgb(255, 255, 255, 0.1);
+  --navColor: #424242;
 }
 :root.ativo {
   --p1: #00b7ff;
@@ -27,6 +28,7 @@ body {
   --bg: #e7e7e7;
   --font1: #141414;
   --bgContent: rgb(0, 0, 0, 0.1);
+  --navColor: #cfcfcf;
 }
 .container {
   max-width: 1115px;
@@ -120,7 +122,7 @@ body {
 }
 .dropDown {
   margin-top: 15px;
-  background-color: var(--bgContent);
+  background-color: var(--navColor);
   border-radius: 4px;
   padding: 10px 0 0 0;
 }
@@ -129,7 +131,7 @@ body {
   width: 0;
   height: 0;
   display: block;
-  border-bottom: 15px solid var(--p3);
+  border-bottom: 15px solid var(--navColor);
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
   position: absolute;
@@ -449,10 +451,17 @@ th {
     z-index: 100;
     top: 50px;
     left: 0;
-    padding: 70px 0 20px 0;
+    padding: 70px 10px 0 10px;
     border-radius: 0 0 5px 5px;
   }
+  [data-menu="lista"] li + li {
+    border-top: 1px var(--p1) solid;
+  }
+  [data-menu="lista"] li ul {
+    padding: 5px 10px;
+  }
   [data-menu="lista"] li ul li {
+    padding: 15px 5px;
     font-weight: normal;
   }
   [data-menu="lista"] li:hover ul {
@@ -495,10 +504,12 @@ th {
 }
 @keyframes show-left {
   from {
-    transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+    opacity: 0;
   }
   to {
     transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 @keyframes show-up {
