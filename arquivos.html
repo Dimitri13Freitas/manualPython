@@ -38,10 +38,10 @@
       </li>
       <li>Seminário
         <ul class="dropDown">
-          <li>Funções</li>
-          <li>Matrizes</li>
-          <li>Ordenação</li>
-          <li>Busca</li>
+          <li><a href="funcao.html">Funções</a></li>
+          <li><a href="matriz.html">Matrizes</a></li>
+          <li><a href="ordenacao.html">Ordenação</a></li>
+          <li><a href="busca.html">Busca</a></li>
         </ul>
       </li>
       <li><a href="dicionario.html">Dicionarios</a></li>
@@ -156,6 +156,46 @@
                     </pre>
                   </div>
                   <p>OBS: A leitura não tem suporte para caracteres especiais.</p>
+                </div>
+              </ul>
+            </div>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Métodos de Arquivos</h2>
+            <div>
+              <ul class="lista">
+                <li>readline - Retorna uma string de uma linha do arquivo, usando o valor de parametro.</li>
+                <li>tell - Retorna qual a posição atual do arquivo.</li>
+                <li>close - Fecha o arquivo em questão.</li>
+                <li>write - Edita o arquivo podendo redefinir o valor dentro de um arquivo.</li>
+                <li>read - Retorna o valor de um arquivo.</li>
+                <p>Para que você consiga adicionar valores a um arquivo sem apagar o valor antigo basta, seguir o exemplo abaixo:</p>
+                <p>Tendo em vista um arquivo de texto com o nome teste contendo:</p>
+                <div class="exemplos">
+                  <pre>
+                    <code>
+  A soma de dois mais dois é igual a 
+                    </code>
+                  </pre>
+                </div>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplos:</p>
+                    <pre>
+                      <code>
+  arq = open('texto.txt', 'a')
+  texto = arq.write('quatro.')
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <pre>
+                      <code>
+  A soma de dois mais dois é igual a quatro.
+                      </code>
+                    </pre>
+                  </div>
                 </div>
               </ul>
             </div>

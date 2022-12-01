@@ -52,32 +52,28 @@
 
   <main>
     <div class="animation">
-      <h1 class="titulo" id="controle">Controle de fluxo de execução<span>.</span></h1>
-
+      <h1 class="titulo" id="introducao">Funções<span>.</span></h1>
       <article class="mainContainer">
-
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Condicionais</h2>
-            <p>Permitem que voçê fassa com que blocos de código sejam ou não executados em relaçao a condição colocada.</p>
+            <h2 class="subtitulo">Conceito de Funções</h2>
             <div>
               <ul class="lista">
-                <li>IF - Verifica se uma condição é verdadeira ou falsa</li>
-                <li>ELSE - Caso a primeira condição no IF seja falsa o bloco de código setado no else sera executado</li>
-                <li>ELIF - Em nescessidade de depois de um IF colocar mais uma condição se é usado o ELIF.</li>
+                <p>Funções são blocos onde podemos colocar um código que podemos repetir durante o programação.</p>
+                <p>Parametro em uma função e um valor não definido, porem nomeamos ele para que, possamos definir o que desejamos fazer com este valor mesmo sem saber qual ele é.</p>
+                <p>Devemos também chamar a função quase como um metodo, caso não chamemos ela não ira executar.</p>
+                <li>Uma função pode ou não ter um parametro.</li>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  x = "Dimitri"
-  y = "Claudio"
+  def soma(num1, num2):
+      x = num1 + num2
+      print(x)
   
-  if x == y:
-      print('Os nomes são iguais')
-  else:
-      print('Os nomes são diferentes')
-                        
+  soma(2, 5)
+  soma(10, 8)
                       </code>
                     </pre>
                   </div>
@@ -85,7 +81,8 @@
                     <p>Retorna:</p>
                     <pre>
                       <code>
-  Os nomes são diferentes
+  7
+  18   
                       </code>
                     </pre>
                   </div>
@@ -93,27 +90,25 @@
               </ul>
             </div>
           </section>
+          <!-- adicionar aqui -->
         </div>
-
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Laços de repetição</h2>
-            <p>Executam um bloco de código quantas vezes for presciso, em efeito de uma condição ou quantidade setada</p>
+            <h2 class="subtitulo">Return</h2>
             <div>
               <ul class="lista">
-                <li>WHILE - Exige uma condição e enquanto essa condição for true o bloco de código setado é executado</li>
-                <li>FOR - é usado com objetos iteráveis tais como listas e intervalos</li>
-                <li>OBS: listas, loops e objetos semprem tem a contagem de itens ou loops começãda em zero</li>
+                <p>Podemos também vincular um valor para a função utilizando "return" no final do processo de sua função.</p>
+                <p>Assim sua função ira funcionar como uma variavel.</p>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  x = 0
-
-  while x != 10:
-      x += 1
-      print(x)
+  def limpaCpf(cpf):
+      x = cpf.replace('.', '').replace('-', '')
+      return x
+  
+  print(limpaCpf("123.456.789-10"))
                       </code>
                     </pre>
                   </div>
@@ -121,16 +116,7 @@
                     <p>Retorna:</p>
                     <pre>
                       <code>
-  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
-  10
+  12345678910
                       </code>
                     </pre>
                   </div>
@@ -142,6 +128,18 @@
       </article>
     </div>
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

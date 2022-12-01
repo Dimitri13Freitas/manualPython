@@ -52,40 +52,33 @@
 
   <main>
     <div class="animation">
-      <h1 class="titulo" id="controle">Controle de fluxo de execução<span>.</span></h1>
-
+      <h1 class="titulo" id="introducao">Matrizes<span>.</span></h1>
       <article class="mainContainer">
-
         <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Condicionais</h2>
-            <p>Permitem que voçê fassa com que blocos de código sejam ou não executados em relaçao a condição colocada.</p>
+            <h2 class="subtitulo">Acessando uma matriz</h2>
             <div>
               <ul class="lista">
-                <li>IF - Verifica se uma condição é verdadeira ou falsa</li>
-                <li>ELSE - Caso a primeira condição no IF seja falsa o bloco de código setado no else sera executado</li>
-                <li>ELIF - Em nescessidade de depois de um IF colocar mais uma condição se é usado o ELIF.</li>
+                <p>Matrizes basicamente é quando temos listas dentro de listas.</p>
+                <p>Segue abaixo uma matriz 3x3, ou seja 3 linhas e 3 colunas.</p>
                 <div class="exemplos">
                   <div>
                     <p>Exemplo:</p>
                     <pre>
                       <code>
-  x = "Dimitri"
-  y = "Claudio"
-  
-  if x == y:
-      print('Os nomes são iguais')
-  else:
-      print('Os nomes são diferentes')
-                        
+  x = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
                       </code>
                     </pre>
                   </div>
                   <div>
-                    <p>Retorna:</p>
+                    <p>Para melhor visualização de código, nós digitamos assim:</p>
                     <pre>
                       <code>
-  Os nomes são diferentes
+  x = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+  ]
                       </code>
                     </pre>
                   </div>
@@ -93,27 +86,28 @@
               </ul>
             </div>
           </section>
-        </div>
-
-        <div class="column">
           <section class="content">
-            <h2 class="subtitulo">Laços de repetição</h2>
-            <p>Executam um bloco de código quantas vezes for presciso, em efeito de uma condição ou quantidade setada</p>
+            <h2 class="subtitulo">Objetos Multidimensionais</h2>
+            <p>Objetos Multidmencionais são aqueles que tem varias camadas.</p>
+            <p>E não se limitam apenas a linhas e colunas.</p>
+            <p>Objetos Multidmencionais são aqueles que tem varias camadas.</p>
+            <p>E não se limitam apenas a linhas e colunas.</p>
             <div>
-              <ul class="lista">
-                <li>WHILE - Exige uma condição e enquanto essa condição for true o bloco de código setado é executado</li>
-                <li>FOR - é usado com objetos iteráveis tais como listas e intervalos</li>
-                <li>OBS: listas, loops e objetos semprem tem a contagem de itens ou loops começãda em zero</li>
+              <ul class="lista listaPalavras">
                 <div class="exemplos">
                   <div>
-                    <p>Exemplo:</p>
+                    <p>Retorna:</p>
                     <pre>
                       <code>
-  x = 0
-
-  while x != 10:
-      x += 1
-      print(x)
+  x = [1,2,3 [4,5,6,[7,8,9],[['Ultimo Valor'],10,11,12,]]]
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Supondo que queremos acessar o ultimo valor:</p>
+                    <pre>
+                      <code>
+  print(x[3][4][0][0])
                       </code>
                     </pre>
                   </div>
@@ -121,18 +115,79 @@
                     <p>Retorna:</p>
                     <pre>
                       <code>
-  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
-  10
+  Ultimo Valor
                       </code>
                     </pre>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+          <!-- adicionar aqui -->
+        </div>
+        <div class="column">
+          <section class="content">
+            <h2 class="subtitulo">Acessando um matriz</h2>
+            <div>
+              <ul class="lista">
+                <p>Seguindo a lógica de acesso de uma lista normal.</p>
+                <p>Temos que passar o numero da coluna e linha que desejamos acessar.</p>
+
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  x = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+  ]
+  print(x[1][1])
+                      </code>
+                    </pre>
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <pre>
+                      <code>
+  5
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </section>
+          <section class="content">
+            <h2 class="subtitulo">Redefinindo valores</h2>
+            <div>
+              <ul class="lista">
+                <p>Para a alteração de um numero dentro da matriz só é nescessario colocar a atribuição de valor.</p>
+                <p>Usando é claro o modo mostrado acima.</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                  <code>
+  x = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+  ]
+
+  x[1][1] = 85
+  x[2][2] = 79
+                  </code>
+                </pre>
+                  </div>
+                  <div>
+                    <p>Retorna:</p>
+                    <pre>
+                  <code>
+  x = [[1, 2, 3],[4, 85, 6],[7, 8, 79]]
+                  </code>
+                </pre>
                   </div>
                 </div>
               </ul>
@@ -142,6 +197,18 @@
       </article>
     </div>
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
