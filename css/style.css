@@ -169,9 +169,6 @@ body {
 .content > div {
   margin-top: 12px;
 }
-.exemplos div {
-  margin-top: 7px;
-}
 .exemplos > p {
   margin: 20px 0;
 }
@@ -184,19 +181,37 @@ body {
   font-family: "Fira Code", monospace;
   color: #f1f1f1;
 }
+.exemplos div {
+  margin-top: 7px;
+  position: relative;
+}
 .exemplos pre {
   background-color: #222222;
   border-radius: 6px;
   position: relative;
   user-select: none;
+  overflow-x: scroll;
 }
-.exemplos pre:hover:after {
+.exemplos pre::-webkit-scrollbar {
+  width: 18px;
+}
+.exemplos pre::-webkit-scrollbar-thumb {
+  background: #2c2c2c;
+  border-radius: 6px;
+}
+.exemplos pre::-webkit-scrollbar-track {
+  border-radius: 0 0 6px 6px;
+  background: #222222;
+}
+.exemplos div:hover:after {
   content: "copiar";
   color: var(--p2);
   background-color: var(--p1);
+  font-size: 0.8rem;
+  font-family: monospace;
   padding: 5px;
   position: absolute;
-  top: 3px;
+  top: 28px;
   right: 3px;
   border-radius: 5px;
   cursor: pointer;

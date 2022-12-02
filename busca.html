@@ -63,6 +63,33 @@
                 <p>Este valor é comparado com cada um dos items sequencialmente..</p>
                 <p>Caso seja achado um valor que seja igual ao valor que queremos buscar.</p>
                 <p>Primeiro é contabilizado se foi achado e depois em qual indice foi encontrado o valor correspondente.</p>
+                <div class="exemplos">
+                  <div>
+                    <p>Exemplo:</p>
+                    <pre>
+                      <code>
+  def busca(lista, nome_pesquisado):
+      tamanho_da_lista = len(lista)
+      for atual in range(0, tamanho_da_lista):
+          if (lista[atual] == nome_pesquisado):
+              return atual
+    
+      return -1
+  
+  def main():
+      lista_de_alunos = sorted(importa_lista('../data/lista_alunos'))
+      posicao_do_aluno = busca(lista_de_alunos, "Wanessa")
+      print("Aluno(a) {} está na posição {}".format(lista_de_alunos[posicao_do_aluno], posicao_do_aluno))
+  
+  if __name__ == "__main__":
+      main()
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </ul>
+            </div>
+
           </section>
         </div>
 

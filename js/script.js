@@ -65,6 +65,7 @@ async function fetchPage(link) {
   response = await fetch(link);
   const pageText = await response.text();
   pushHtml(pageText);
+  copy();
 }
 
 function pushHtml(html) {
@@ -84,13 +85,15 @@ window.addEventListener('popstate', () => {
 window.onload = () => {
   saveTheme();
   imageHome();
+  copy();
 }
 
-const pre = document.querySelectorAll('pre');
- pre.forEach(e => {
-  e.addEventListener('click', () => copy(e));
-});
-
-function copy(e) {
- navigator.clipboard.writeText(e.firstElementChild.innerText);
+function copy() {
+  const test = document.querySelectorAll('.exemplos div');
+  test.forEach(e => {
+    e.addEventListener('click',() => {
+      const pre = e.querySelector('pre');
+       navigator.clipboard.writeText(pre.firstElementChild.innerText);
+    })
+  })
 }
