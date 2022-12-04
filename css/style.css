@@ -173,6 +173,15 @@ body {
 .exemplos > p {
   margin: 20px 0;
 }
+.exemplosImg img {
+  width: 100%;
+}
+.exemplosImg .normal {
+  width: auto;
+}
+.exemplosImg li {
+  margin-top: 12px;
+}
 .exemplos div p {
   color: var(--font1);
   font-size: 1.3rem;
